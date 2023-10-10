@@ -1,0 +1,28 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: Iv1.3b72a0d610581cfd
+            client-secret: 53d0289b5befefbf6278dc52ec208fe5b39df46f
+        provider:
+          github:
+            token-uri: https://github.com/login/oauth/access_token
+            authorization-uri: https://github.com/login/oauth/authorize
+            user-info-uri: https://api.github.com/user
+            user-name-attribute: login
+            scope: user:email # Add this line to request email scope
+
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=OAuthDemo
+    username: sa
+    password: test@1234
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  jpa:
+    hibernate:
+      ddl-auto: create # You can choose other values like "create", "create-drop", or "validate"
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServerDialect
