@@ -6,6 +6,9 @@ spring:
           github:
             client-id: Iv1.3b72a0d610581cfd
             client-secret: 53d0289b5befefbf6278dc52ec208fe5b39df46f
+          google:
+            client-id: 851568476284-rj9daq4g6kh6led8qmcftus57bm18qhk.apps.googleusercontent.com
+            client-secret: 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
         provider:
           github:
             token-uri: https://github.com/login/oauth/access_token
